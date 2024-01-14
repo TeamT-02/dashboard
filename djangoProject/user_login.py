@@ -79,4 +79,4 @@ def Profile_Update(request):
 def logout_view(request):
     logout(request)
     # Redirect to a specific page after logout, or you can customize this as needed.
-    return redirect('login')
+    return redirect('doLogin')

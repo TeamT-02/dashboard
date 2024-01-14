@@ -11,4 +11,5 @@ urlpatterns = [
     path('accounts/profile', user_login.PROFILE, name='profile'),
     path('accounts/profile/update', user_login.Profile_Update, name='profile_update'),
     path('logout/', user_login.logout_view, name='logout'),
+    path('', include('main.urls'))
 ]
