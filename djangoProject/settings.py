@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,7 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'channels',
+    'main',
+    'crispy_forms',
 ]
+
+ASGI_APPLICATION = 'djangoProject.routing.application'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -1,0 +1,28 @@
+{% extends 'include/base.html' %}
+{% block connect %}
+    <div style="margin-left: 27rem;" class="col-sm-12 col-xl-6 mt-5">
+        <div class="bg-secondary rounded h-100 p-4 mt-2">
+            <h6 class="mb-4">Home Update</h6>
+            <form method="post" action="{% url 'update_home' %}">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <input class="form-control form-control-sm bg-dark" id="formFileSm" type="file" name="images" value="{% for i in home_edit %}{{ i.images }}{% endfor %}">
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput"
+                           placeholder="title" name="title" value="{% for i in home_edit %}{{ i.title }}{% endfor %}">
+                    <label for="floatingInput">title</label>
+                </div>
+                <div class="form-floating">
+                                <input type="text" class="form-control" placeholder="Leave a comment here"
+                                          id="floatingTextarea" style="height: 150px;" name="text" value="{% for i in home_edit %}{{ i.text }}{% endfor %}">
+                    <label for="floatingTextarea">Comments</label>
+                </div>
+                <button class="mt-4" type="submit">Save</button>
+
+            </form>
+
+
+        </div>
+    </div>
+{% endblock %}
