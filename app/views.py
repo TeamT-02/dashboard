@@ -20,7 +20,7 @@ def forms(r):
 
 def ADD_HOME(request):
     if request.method == "POST":
-        images = request.POST.get('images')
+        images = request.FILES.get('images')
         title = request.POST.get('title')
         text = request.POST.get('text')
         home = Home(
@@ -130,7 +130,7 @@ def ADD_PROBLEMS(request):
     if request.method == "POST":
         title = request.POST.get('title')
         text = request.POST.get('text')
-        images = request.POST.get('images')
+        images = request.FILES.get('images')
         problems = Problems_left(
             title=title,
             text=text,
@@ -145,7 +145,7 @@ def ADD_PROBLEMSr(request):
     if request.method == "POST":
         title = request.POST.get('title')
         text = request.POST.get('text')
-        images = request.POST.get('images')
+        images = request.FILES.get('images')
         problems = Problems_right(
             title=title,
             text=text,
@@ -187,7 +187,7 @@ def EDIT_PROBLEMSr(request, id):
 def UPDATE_PROBLEMS(request):
     if request.method == "POST":
         title = request.POST.get('title')
-        images = request.POST.get('images')
+        images = request.FILES.get('images')
         text = request.POST.get('text')
         problems = Problems_left(
             title=title,
@@ -201,7 +201,7 @@ def UPDATE_PROBLEMS(request):
 def UPDATE_PROBLEMSr(request):
     if request.method == "POST":
         title = request.POST.get('title')
-        images = request.POST.get('images')
+        images = request.FILES.get('images')
         text = request.POST.get('text')
         problems = Problems_right(
             title=title,
@@ -228,7 +228,7 @@ def DELETE_PROBLEMSr(request, id):
 
 def ADD_SOCIAL(request):
     if request.method == "POST":
-        images = request.POST.get('images')
+        images = request.FILES.get('images')
         title = request.POST.get('images')
         text = request.POST.get('text')
         social = Social_Networks(
@@ -259,7 +259,7 @@ def EDIT_SOCIAL(request, id):
 
 def UPDATE_SOCIAL(request):
     if request.method == "POST":
-        images = request.POST.get('images')
+        images = request.FILES.get('images')
         title = request.POST.get('images')
         text = request.POST.get('text')
         social = Social_Networks(
@@ -284,7 +284,7 @@ def ADD_SOCIAL_LINK(request):
         'social': social
     }
     if request.method == "POST":
-        forkey = request.POST.get('forkey')
+        # forkey = request.POST.get('forkey')
         insta = request.POST.get('insta')
         teleg = request.POST.get('teleg')
         telebot = request.POST.get('telebot')
@@ -317,7 +317,7 @@ def EDIT_SOCIAL_LINK(request, id):
 
 def UPDATE_SOCIAL_LINK(request):
     if request.method == "POST":
-        forkey = request.POST.get('forkey')
+        # forkey = request.POST.get('forkey')
         insta = request.POST.get('insta')
         teleg = request.POST.get('teleg')
         telebot = request.POST.get('telebot')

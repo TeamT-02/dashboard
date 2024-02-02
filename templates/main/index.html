@@ -1,5 +1,7 @@
 {% extends 'main/base.html' %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 {% block connect %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Start of Header
     ============================================= -->
 
@@ -64,45 +66,43 @@
                                             <div class="head-content d-flex bg-gradient align-items-center">
                                                 <div class="container">
                                                     <div class="banner-wrapper">
-                                                        <div class="row align-items-center">
-                                                            <div class="col-lg-6 col-md-12">
-                                                                <div class="banner-content pt-5">
-                                                                    <h1 class="best-template animated"
-                                                                        data-animation="fadeInUpShorter"
-                                                                        data-animation-delay="1.5s">Crypto IGO is
-                                                                        modern,
-                                                                        clean and gradient ui igo most trending template
-                                                                        of
-                                                                        2018</h1>
-                                                                    <h3 class="d-block white animated"
-                                                                        data-animation="fadeInUpShorter"
-                                                                        data-animation-delay="1.6s">First decentralized
-                                                                        marketing platform that allows merchants and
-                                                                        affiliates.</h3>
-                                                                    <div class="mt-5">
-                                                                        <a href="#token_sale"
-                                                                           class="btn btn-lg btn-gradient-purple btn-glow mr-4 mb-2 animated"
-                                                                           data-animation="fadeInUpShorter"
-                                                                           data-animation-delay="1.7s">Purchase
-                                                                            Token</a>
-                                                                        <a href="#whitepaper"
-                                                                           class="btn btn-lg btn-gradient-purple btn-glow mb-2 animated"
-                                                                           data-animation="fadeInUpShorter"
-                                                                           data-animation-delay="1.8s">Whitepage</a>
+                                                        {% for i in base %}
+                                                            <div class="row align-items-center">
+                                                                <div class="col-lg-6 col-md-12">
+                                                                    <div class="banner-content pt-5">
+                                                                        <h1 class="best-template animated"
+                                                                            data-animation="fadeInUpShorter"
+                                                                            data-animation-delay="1.5s">{{ i.title }}</h1>
+                                                                        <h3 class="d-block white animated"
+                                                                            data-animation="fadeInUpShorter"
+                                                                            data-animation-delay="1.6s">{{ i.text }}</h3>
+                                                                        <div class="mt-5">
+                                                                            <a href="#token_sale"
+                                                                               class="btn btn-lg btn-gradient-purple btn-glow mr-4 mb-2 animated"
+                                                                               data-animation="fadeInUpShorter"
+                                                                               data-animation-delay="1.7s">Purchase
+                                                                                Token</a>
+                                                                            <a href="#whitepaper"
+                                                                               class="btn btn-lg btn-gradient-purple btn-glow mb-2 animated"
+                                                                               data-animation="fadeInUpShorter"
+                                                                               data-animation-delay="1.8s">Whitepage</a>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-lg-6 col-md-12 move-first">
-                                                                <div class="crypto-3d-graphic animated"
-                                                                     data-animation="fadeInUpShorter"
-                                                                     data-animation-delay="1.7s">
-                                                                    <img decoding="async"
-                                                                         src="https://jthemes.net/themes/wp/cryptoigo/wp-content/uploads/2018/07/banner-graphic.png"
-                                                                         class="graphic-3d-img mx-auto d-block" alt="">
-                                                                </div>
+                                                                <div class="col-lg-6 col-md-12 move-first">
+                                                                    <div class="crypto-3d-graphic animated"
+                                                                         data-animation="fadeInUpShorter"
+                                                                         data-animation-delay="1.7s">
+                                                                        <img style="height: 20rem;width: 21rem;margin-top: 6rem;"
+                                                                             decoding="async"
+                                                                             src="{{ i.images.url }}"
+                                                                             class="graphic-3d-img mx-auto d-block"
+                                                                             alt="">
+                                                                    </div>
 
+                                                                </div>
                                                             </div>
-                                                        </div>
+                                                        {% endfor %}
                                                     </div>
                                                 </div>
                                             </div>
@@ -143,38 +143,14 @@
                                                             <p class="grey-accent2 mt-1">Exchange listing to be
                                                                 announced</p>
                                                         </div>
-                                                        <div class="col text-center animated"
-                                                             data-animation="fadeInUpShorter"
-                                                             data-animation-delay="0.3s">
-                                                            <h2>4.3/5</h2>
-                                                            <img decoding="async"
-                                                                 src="https://jthemes.net/themes/wp/cryptoigo/wp-content/uploads/2018/06/ico-track.png"
-                                                                 alt="ico-track">
-                                                        </div>
-                                                        <div class="col text-center animated"
-                                                             data-animation="fadeInUpShorter"
-                                                             data-animation-delay="0.4s">
-                                                            <h2>4.8/5</h2>
-                                                            <img decoding="async"
-                                                                 src="https://jthemes.net/themes/wp/cryptoigo/wp-content/uploads/2018/06/ico-bench.png"
-                                                                 alt="ico-track">
-                                                        </div>
-                                                        <div class="col text-center animated"
-                                                             data-animation="fadeInUpShorter"
-                                                             data-animation-delay="0.5s">
-                                                            <h2>3.9/5</h2>
-                                                            <img decoding="async"
-                                                                 src="https://jthemes.net/themes/wp/cryptoigo/wp-content/uploads/2018/06/ico-ranker.png"
-                                                                 alt="ico-track">
-                                                        </div>
-                                                        <div class="col text-center animated"
-                                                             data-animation="fadeInUpShorter"
-                                                             data-animation-delay="0.6s">
-                                                            <h2>4.1/5</h2>
-                                                            <img decoding="async"
-                                                                 src="https://jthemes.net/themes/wp/cryptoigo/wp-content/uploads/2018/06/ico-bazaar.png"
-                                                                 alt="ico-track">
-                                                        </div>
+                                                        {% for i in statik %}
+                                                            <div class="col text-center animated"
+                                                                 data-animation="fadeInUpShorter"
+                                                                 data-animation-delay="0.3s">
+                                                                <h2>{{ i.number }}</h2>
+                                                                <h4>{{ i.name }}</h4>
+                                                            </div>
+                                                        {% endfor %}
                                                     </div>
                                                 </div>
                                             </div>
@@ -225,83 +201,64 @@
 
                                                     <div class="problems">
                                                         <div class="row">
-                                                            <div class="col-md-12 col-lg-6 ">
-                                                                <div class="dark-bg-heading mb-4">
-                                                                    <h4 class="title animated"
-                                                                        data-animation="fadeInUpShorter"
-                                                                        data-animation-delay="0.2s">Problems</h4>
-                                                                    <div class="separator animated"
-                                                                         data-animation="fadeInUpShorter"
-                                                                         data-animation-delay="0.3s">
-                                                                        <span class="large"></span>
-                                                                        <span class="medium"></span>
-                                                                        <span class="small"></span>
+                                                            {% for i in left %}
+                                                                <div class="col-md-12 col-lg-6 ">
+                                                                    <div class="dark-bg-heading mb-4">
+                                                                        <h4 class="title animated"
+                                                                            data-animation="fadeInUpShorter"
+                                                                            data-animation-delay="0.2s">{{ i.title }}</h4>
+                                                                        <div class="separator animated"
+                                                                             data-animation="fadeInUpShorter"
+                                                                             data-animation-delay="0.3s">
+                                                                            <span class="large"></span>
+                                                                            <span class="medium"></span>
+                                                                            <span class="small"></span>
+                                                                        </div>
                                                                     </div>
+                                                                    <p>{{ i.text }}</p>
                                                                 </div>
-                                                                <p>Decentralized cryptocurrency is produced by the
-                                                                    entire
-                                                                    cryptocurrency system collectively, at a rate which
-                                                                    is
-                                                                    defined when the system is created and which is
-                                                                    publicly
-                                                                    known.</p>
-                                                                <p>In centralized banking and economic systems such as
-                                                                    the
-                                                                    Federal Reserve System, corporate boards or
-                                                                    governments
-                                                                    control the supply of currency by printing units of
-                                                                    fiat
-                                                                    money or demanding additions to digital banking
-                                                                    ledgers.</p></div>
-                                                            <div class="col-md-12 col-lg-6 text-center">
-                                                                <img decoding="async"
-                                                                     src="https://jthemes.net/themes/wp/cryptoigo/wp-content/uploads/2018/08/problems-graphic.png"
-                                                                     class="problems-img animated"
-                                                                     data-animation="fadeInUpShorter"
-                                                                     data-animation-delay="0.6s" alt="problems-graphic">
-                                                            </div>
+                                                                <div class="col-md-12 col-lg-6 text-center">
+                                                                    <img style="height: 23rem;width: 25rem;"
+                                                                         decoding="async"
+                                                                         src="{{ i.images.url }}"
+                                                                         class="problems-img animated"
+                                                                         data-animation="fadeInUpShorter"
+                                                                         data-animation-delay="0.6s"
+                                                                         alt="problems-graphic">
+                                                                </div>
+                                                            {% endfor %}
                                                         </div>
                                                     </div>
                                                     <div class="problems">
                                                         <div class="row">
-                                                            <div class="col-md-12 col-lg-6 order-12 move-lg-first">
-                                                                <div class="dark-bg-heading mb-4">
-                                                                    <h4 class="title animated"
-                                                                        data-animation="fadeInUpShorter"
-                                                                        data-animation-delay="0.2s">Solutions</h4>
-                                                                    <div class="separator animated"
-                                                                         data-animation="fadeInUpShorter"
-                                                                         data-animation-delay="0.3s">
-                                                                        <span class="large"></span>
-                                                                        <span class="medium"></span>
-                                                                        <span class="small"></span>
+                                                            {% for i in right %}
+                                                                <div class="col-md-12 col-lg-6 order-12 move-lg-first">
+                                                                    <div class="dark-bg-heading mb-4">
+                                                                        <h4 class="title animated"
+                                                                            data-animation="fadeInUpShorter"
+                                                                            data-animation-delay="0.2s">{{ i.title }}</h4>
+                                                                        <div class="separator animated"
+                                                                             data-animation="fadeInUpShorter"
+                                                                             data-animation-delay="0.3s">
+                                                                            <span class="large"></span>
+                                                                            <span class="medium"></span>
+                                                                            <span class="small"></span>
+                                                                        </div>
                                                                     </div>
+                                                                    <p class="animated fadeInUpShorter"
+                                                                       data-animation="fadeInUpShorter"
+                                                                       data-animation-delay="0.5s">{{ i.text }}</p>
                                                                 </div>
-                                                                <p class="animated fadeInUpShorter"
-                                                                   data-animation="fadeInUpShorter"
-                                                                   data-animation-delay="0.5s">Decentralized
-                                                                    cryptocurrency
-                                                                    is produced by the entire cryptocurrency system
-                                                                    collectively, at a rate which is defined when the
-                                                                    system
-                                                                    is created and which is publicly known.</p>
-                                                                <p class="animated fadeInUpShorter"
-                                                                   data-animation="fadeInUpShorter"
-                                                                   data-animation-delay="0.7s">In centralized banking
-                                                                    and
-                                                                    economic systems such as the Federal Reserve System,
-                                                                    corporate boards or governments control the supply
-                                                                    of
-                                                                    currency by printing units of fiat money or
-                                                                    demanding
-                                                                    additions to digital banking ledgers.</p></div>
-                                                            <div class="col-md-12 col-lg-6 text-center">
-                                                                <img decoding="async"
-                                                                     src="https://jthemes.net/themes/wp/cryptoigo/wp-content/uploads/2018/08/solutions-graphic.png"
-                                                                     class="problems-img animated"
-                                                                     data-animation="fadeInUpShorter"
-                                                                     data-animation-delay="0.6s" alt="problems-graphic">
-                                                            </div>
+                                                                <div class="col-md-12 col-lg-6 text-center">
+                                                                    <img style="height: 23rem;width: 25rem;"
+                                                                         decoding="async"
+                                                                         src="{{ i.images.url }}"
+                                                                         class="problems-img animated"
+                                                                         data-animation="fadeInUpShorter"
+                                                                         data-animation-delay="0.6s"
+                                                                         alt="problems-graphic">
+                                                                </div>
+                                                            {% endfor %}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -353,110 +310,78 @@
                                                     <div class="row">
                                                         <div class="col-md-12 col-lg-4">
                                                             <div class="whitepaper-img">
-                                                                <img decoding="async" class="img-fluid animated"
-                                                                     data-animation="fadeInUpShorter"
-                                                                     data-animation-delay="0.6s"
-                                                                     src="https://jthemes.net/themes/wp/cryptoigo/wp-content/uploads/2018/06/whitepaper.png"
-                                                                     alt="whitepaper">
+                                                                {% for i in social %}
+                                                                    <img decoding="async" class="img-fluid animated"
+                                                                         data-animation="fadeInUpShorter"
+                                                                         data-animation-delay="0.6s"
+                                                                         src="{{ i.images.url }}"
+                                                                         alt="whitepaper">
+                                                                {% endfor %}
                                                             </div>
                                                         </div>
                                                         <div class="col-md-12 col-lg-8">
-                                                            <div class="content-area">
+                                                            {% for i in social %}
+                                                                <div class="content-area">
 
-                                                                <h4 class="animated" data-animation="fadeInUpShorter"
-                                                                    data-animation-delay="0.5s">Whitepaper</h4>
-                                                                <div class="animated" data-animation="fadeInUpShorter"
-                                                                     data-animation-delay="0.6s"><p
-                                                                        class="animated fadeInUpShorter"
+                                                                    <h4 class="animated"
                                                                         data-animation="fadeInUpShorter"
-                                                                        data-animation-delay="0.6s">A white paper is an
-                                                                    authoritative report or guide that informs readers
-                                                                    concisely about a complex issue and presents the
-                                                                    issuing
-                                                                    body's philosophy on the matter. It is meant to help
-                                                                    readers understand an issue, solve a problem, or
-                                                                    make a
-                                                                    decision.</p>
-                                                                    <p class="animated fadeInUpShorter"
-                                                                       data-animation="fadeInUpShorter"
-                                                                       data-animation-delay="0.7s">The initial British
-                                                                        term
-                                                                        concerning a type of government-issued document
-                                                                        has
-                                                                        proliferated, taking a somewhat new meaning in
-                                                                        business. In business, a white paper is closer
-                                                                        to a
-                                                                        form of marketing presentation, a tool meant to
-                                                                        persuade customers and partners and promote a
-                                                                        product or viewpoint, White papers may be
-                                                                        considered
-                                                                        grey literature.</p>
-                                                                    <p class="animated fadeInUpShorter"
-                                                                       data-animation="fadeInUpShorter"
-                                                                       data-animation-delay="0.8s">Since the early
-                                                                        1990s,
-                                                                        the term "white paper", or "whitepaper", has
-                                                                        been
-                                                                        applied to documents used as marketing or sales
-                                                                        tools in business.</p></div>
+                                                                        data-animation-delay="0.5s">{{ i.title }}</h4>
+                                                                    <div class="animated"
+                                                                         data-animation="fadeInUpShorter"
+                                                                         data-animation-delay="0.6s"><p
+                                                                            class="animated fadeInUpShorter"
+                                                                            data-animation="fadeInUpShorter"
+                                                                            data-animation-delay="0.6s">{{ i.text }}</p>
+                                                                    </div>
 
-                                                                <div class="whitepaper-languages">
-                                                                    <div class="row">
-                                                                        <div class="col-md-3 col-6 text-center mt-4 animated"
-                                                                             data-animation="fadeInUpShorter"
-                                                                             data-animation-delay="0.6s">
-                                                                            <a href="#" title="English">
-                                                                                <img decoding="async"
-                                                                                     src="https://jthemes.net/themes/wp/cryptoigo/wp-content/uploads/2018/06/flag-1.png"
-                                                                                     alt="English">
-                                                                                <div class="lang-text">
-                                                                                    <span class="icon ti-download mr-1"></span>
-                                                                                    <span class="language">English</span>
+                                                                    <div class="whitepaper-languages">
+                                                                        <div class="row">
+                                                                            {% for foo in social_link %}
+                                                                                <div class="col-md-3 col-6 text-center mt-4 animated"
+                                                                                     data-animation="fadeInUpShorter"
+                                                                                     data-animation-delay="0.6s">
+                                                                                    <a href="{{ foo.instagram_link }}"
+                                                                                       title="English">
+                                                                                        <i class="bi bi-instagram"></i>
+                                                                                        <div class="lang-text">
+                                                                                            <i class="bi bi-instagram"></i>
+                                                                                            <span class="language">instagram</span>
+                                                                                        </div>
+                                                                                    </a>
                                                                                 </div>
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="col-md-3 col-6 text-center mt-4 animated"
-                                                                             data-animation="fadeInUpShorter"
-                                                                             data-animation-delay="0.6s">
-                                                                            <a href="#" title="English">
-                                                                                <img decoding="async"
-                                                                                     src="https://jthemes.net/themes/wp/cryptoigo/wp-content/uploads/2018/06/flag-2.png"
-                                                                                     alt="English">
-                                                                                <div class="lang-text">
-                                                                                    <span class="icon ti-download mr-1"></span>
-                                                                                    <span class="language">Japanese</span>
+                                                                            {% endfor %}
+                                                                            {% for foo in social_link %}
+                                                                                <div class="col-md-3 col-6 text-center mt-4 animated"
+                                                                                     data-animation="fadeInUpShorter"
+                                                                                     data-animation-delay="0.6s">
+                                                                                    <a href="{{ foo.telegram_link }}"
+                                                                                       title="English">
+                                                                                        <i class="bi bi-telegram"></i>
+                                                                                        <div class="lang-text">
+                                                                                            <i class="bi bi-telegram"></i>
+                                                                                            <span class="language">telegram</span>
+                                                                                        </div>
+                                                                                    </a>
                                                                                 </div>
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="col-md-3 col-6 text-center mt-4 animated"
-                                                                             data-animation="fadeInUpShorter"
-                                                                             data-animation-delay="0.6s">
-                                                                            <a href="#" title="English">
-                                                                                <img decoding="async"
-                                                                                     src="https://jthemes.net/themes/wp/cryptoigo/wp-content/uploads/2018/06/flag-3.png"
-                                                                                     alt="English">
-                                                                                <div class="lang-text">
-                                                                                    <span class="icon ti-download mr-1"></span>
-                                                                                    <span class="language">Russian</span>
+                                                                            {% endfor %}
+                                                                            {% for foo in social_link %}
+                                                                                <div class="col-md-3 col-6 text-center mt-4 animated"
+                                                                                     data-animation="fadeInUpShorter"
+                                                                                     data-animation-delay="0.6s">
+                                                                                    <a href="{{ foo.telegram_bot }}"
+                                                                                       title="English">
+                                                                                        <i class="bi bi-telegram"></i>
+                                                                                        <div class="lang-text">
+                                                                                            <i class="bi bi-telegram"></i>
+                                                                                            <span class="language">telegram bot</span>
+                                                                                        </div>
+                                                                                    </a>
                                                                                 </div>
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="col-md-3 col-6 text-center mt-4 animated"
-                                                                             data-animation="fadeInUpShorter"
-                                                                             data-animation-delay="0.6s">
-                                                                            <a href="#" title="English">
-                                                                                <img decoding="async"
-                                                                                     src="https://jthemes.net/themes/wp/cryptoigo/wp-content/uploads/2018/06/flag-4.png"
-                                                                                     alt="English">
-                                                                                <div class="lang-text">
-                                                                                    <span class="icon ti-download mr-1"></span>
-                                                                                    <span class="language">Chinese</span>
-                                                                                </div>
-                                                                            </a>
+                                                                            {% endfor %}
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
+                                                            {% endfor %}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -526,29 +451,19 @@
                                                              data-animation="fadeInRightShorter"
                                                              data-animation-delay="0.6s">
                                                             <div class="row ml-0 mt-5">
-                                                                <p class="grey-accent2">We have successfully reached the
-                                                                    soft cap! Join now and get a higher discount. <br>
-                                                                    Get your tokens for the best price: We fixed the
-                                                                    Ether
-                                                                    price at $800.</p>
+                                                                {% for i in website %}
+                                                                    <p class="grey-accent2">{{ i.text }}</p>
+                                                                {% endfor %}
                                                                 <div class="token-sale-info-list">
                                                                     <ul class="token-sale-info">
-                                                                        <li class="col-md-6">Public PRE-ITS starts
-                                                                            <strong>13
-                                                                                March</strong></li>
-                                                                        <li class="col-md-6">Acceptable currencies
-                                                                            <strong>ETH,
-                                                                                BTC, LTC</strong></li>
-                                                                        <li class="col-md-6">Public ITS ends <strong>25
-                                                                            May</strong></li>
-                                                                        <li class="col-md-6">Minimal transaction
-                                                                            <strong>1
-                                                                                ETH, 1 BTC, 1 LTC</strong></li>
-                                                                        <li class="col-md-6">Public ITS starts <strong>25
-                                                                            April</strong></li>
-                                                                        <li class="col-md-6">Number of tokens sale
-                                                                            <strong>890,000
-                                                                                CIC (8%)</strong></li>
+                                                                        {% for i in website %}
+                                                                            <li class="col-md-6">Update
+                                                                                <strong>{{ i.funksiya_update_left }}</strong>
+                                                                            </li>
+                                                                            <li class="col-md-6">Update
+                                                                                <strong>{{ i.funksiya_update }}</strong>
+                                                                            </li>
+                                                                        {% endfor %}
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -561,37 +476,39 @@
 
 
                                         <script>
-                                            var clock;
+                                            {% for i in website %}
+                                                var clock;
 
-                                            jQuery(document).ready(function () {
-                                                // Set dates.
-                                                var futureDate = new Date("2/30/2024");
-                                                var currentDate = new Date();
+                                                jQuery(document).ready(function () {
+                                                    // Set dates.
+                                                    var futureDate = new Date("{{ i.date }}");
+                                                    var currentDate = new Date();
 
-                                                // Calculate the difference in seconds between the future and current date
-                                                var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+                                                    // Calculate the difference in seconds between the future and current date
+                                                    var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
 
-                                                // Calculate day difference and apply class to .clock for extra digit styling.
-                                                function dayDiff(first, second) {
-                                                    return (second - first) / (1000 * 60 * 60 * 24);
-                                                }
+                                                    // Calculate day difference and apply class to .clock for extra digit styling.
+                                                    function dayDiff(first, second) {
+                                                        return (second - first) / (1000 * 60 * 60 * 24);
+                                                    }
 
-                                                if (dayDiff(currentDate, futureDate) < 100) {
-                                                    jQuery('.clock').addClass('twoDayDigits');
-                                                } else {
-                                                    jQuery('.clock').addClass('threeDayDigits');
-                                                }
+                                                    if (dayDiff(currentDate, futureDate) < 100) {
+                                                        jQuery('.clock').addClass('twoDayDigits');
+                                                    } else {
+                                                        jQuery('.clock').addClass('threeDayDigits');
+                                                    }
 
-                                                if (diff < 0) {
-                                                    diff = 0;
-                                                }
+                                                    if (diff < 0) {
+                                                        diff = 0;
+                                                    }
 
-                                                // Instantiate a coutdown FlipClock
-                                                clock = jQuery('.clock').FlipClock(diff, {
-                                                    clockFace: 'DailyCounter',
-                                                    countdown: true
+                                                    // Instantiate a coutdown FlipClock
+                                                    clock = jQuery('.clock').FlipClock(diff, {
+                                                        clockFace: 'DailyCounter',
+                                                        countdown: true
+                                                    });
                                                 });
-                                            });
+                                            {% endfor %}
                                         </script>
 
 
@@ -629,75 +546,59 @@
                                                         key pairs.</p>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-lg-6 col-md-12 animated"
-                                                         data-animation="fadeInUpShorter" data-animation-delay="0.6s">
-                                                        <div class="app-content">
-                                                            <div class="dark-bg-heading mb-4">
-                                                                <h4 class="title">ANDROID &amp; IOS APP</h4>
+                                                    {% for i in company %}
+                                                        <div class="col-lg-6 col-md-12 animated"
+                                                             data-animation="fadeInUpShorter"
+                                                             data-animation-delay="0.6s">
+                                                            <div class="app-content">
+                                                                <div class="dark-bg-heading mb-4">
+                                                                    <h4 class="title">ANDROID &amp; IOS APP</h4>
+                                                                </div>
+                                                                <div class="app-content-area">
+                                                                    <p>Mobile app development is a term used to denote
+                                                                        the
+                                                                        act
+                                                                        or process by which a mobile app is developed
+                                                                        for
+                                                                        mobile
+                                                                        devices, such as personal digital assistants,
+                                                                        enterprise
+                                                                        digital assistants or mobile phones. These
+                                                                        applications
+                                                                        can be pre-installed on phones during
+                                                                        manufacturing
+                                                                        platforms, or delivered as web application using
+                                                                        server-side or client-side processing to provide
+                                                                        an
+                                                                        "application-like" experience within a Web
+                                                                        browser.</p>
+                                                                </div>
                                                             </div>
-                                                            <div class="app-content-area">
-                                                                <p>Mobile app development is a term used to denote the
-                                                                    act
-                                                                    or process by which a mobile app is developed for
-                                                                    mobile
-                                                                    devices, such as personal digital assistants,
-                                                                    enterprise
-                                                                    digital assistants or mobile phones. These
-                                                                    applications
-                                                                    can be pre-installed on phones during manufacturing
-                                                                    platforms, or delivered as web application using
-                                                                    server-side or client-side processing to provide an
-                                                                    "application-like" experience within a Web
-                                                                    browser.</p>
-                                                            </div>
+                                                            <ul class="app-features">
+                                                                {% for i in company %}
+                                                                    <li class="dark-bg-text-color">
+                                                                        <i class="ti-pulse white mr-3"></i> {{ i.fun }}
+                                                                    </li>
+                                                                {% endfor %}
+                                                            </ul>
+
+                                                            <a href="#"
+                                                               class="android mobile-button btn btn-gradient-purple btn-glow mr-4"><span>{{ i.title }}</span>
+                                                                <img decoding="async"
+                                                                     src="https://jthemes.net/themes/wp/cryptoigo/wp-content/uploads/2018/07/icon-android.png"
+                                                                     alt=""></a>
+
                                                         </div>
-                                                        <ul class="app-features">
-                                                            <li class="dark-bg-text-color">
-                                                                <i class="ti-pulse white mr-3"></i> Live crypto rate
-                                                            </li>
-                                                            <li class="dark-bg-text-color">
-                                                                <i class="ti-stats-up white mr-3"></i> Latest
-                                                                cryptocurrency
-                                                                news
-                                                            </li>
-                                                            <li class="dark-bg-text-color">
-                                                                <i class="ti-split-h white mr-3"></i> Cryptocurrency
-                                                                exchange
-                                                            </li>
-                                                        </ul>
-
-                                                        <a href="#"
-                                                           class="android mobile-button btn btn-gradient-purple btn-glow mr-4"><span>Androaid</span>
-                                                            <img decoding="async"
-                                                                 src="https://jthemes.net/themes/wp/cryptoigo/wp-content/uploads/2018/07/icon-android.png"
-                                                                 alt=""></a>
-                                                        <a href="#"
-                                                           class="apple mobile-button btn btn-gradient-purple btn-glow"><span>Apple</span>
-                                                            <img decoding="async"
-                                                                 src="https://jthemes.net/themes/wp/cryptoigo/wp-content/uploads/2018/07/icon-apple.png"
-                                                                 alt=""></a>
-
-                                                    </div>
+                                                    {% endfor %}
                                                     <div class="col-lg-6 col-md-12 move-first">
                                                         <div class="mobile-app-imgs">
-                                                            <img decoding="async"
-                                                                 src="https://jthemes.net/themes/wp/cryptoigo/wp-content/uploads/2018/07/mobile-app-1.png"
-                                                                 alt="mobile-app" class="mobile-app-img-1 animated"
-                                                                 data-animation="fadeInUpShorter"
-                                                                 data-animation-delay="0.9s">
-                                                            <img decoding="async"
-                                                                 src="https://jthemes.net/themes/wp/cryptoigo/wp-content/uploads/2018/07/mobile-app-2.png"
-                                                                 alt="mobile-app" class="mobile-app-img-2 animated"
-                                                                 data-animation="zoomIn" data-animation-delay="1.4s">
-                                                            <img decoding="async"
-                                                                 src="https://jthemes.net/themes/wp/cryptoigo/wp-content/uploads/2018/07/mobile-app-3.png"
-                                                                 alt="mobile-app" class="mobile-app-img-3 animated"
-                                                                 data-animation="zoomIn" data-animation-delay="1.9s">
-                                                            <img decoding="async"
-                                                                 src="https://jthemes.net/themes/wp/cryptoigo/wp-content/uploads/2018/07/mobile-app-4.png"
-                                                                 alt="mobile-app" class="mobile-app-img-4 animated"
-                                                                 data-animation="zoomIn" data-animation-delay="2.4s">
-
+                                                            {% for i in company %}
+                                                                <img decoding="async"
+                                                                     src="{{ i.images.url }}"
+                                                                     alt="mobile-app" class="mobile-app-img-1 animated"
+                                                                     data-animation="fadeInUpShorter"
+                                                                     data-animation-delay="0.9s">
+                                                            {% endfor %}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -754,69 +655,18 @@
                                                             <div class="roadmap-container">
                                                                 <div class="swiper-container">
                                                                     <div class="swiper-wrapper timeline">
-                                                                        <div class="swiper-slide">
-                                                                            <div class="roadmap-info">
-                                                                                <div class="timestamp completed">
-                                                                                    <span class="date">November 2017</span>
-                                                                                </div>
-                                                                                <div class="status completed">
-                                                                                    <span> Crypto Igo <br>Platform idea </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="swiper-slide">
-                                                                            <div class="roadmap-info">
-                                                                                <div class="timestamp completed">
-                                                                                    <span class="date">January 2018</span>
-                                                                                </div>
-                                                                                <div class="status completed">
-                                                                                    <span> Technical &amp; strategy <br/>devlopment </span>
+                                                                        {% for i in action %}
+                                                                            <div class="swiper-slide {{ i.action }}">
+                                                                                <div class="roadmap-info">
+                                                                                    <div class="timestamp completed">
+                                                                                        <span class="date">{{ i.date }}</span>
+                                                                                    </div>
+                                                                                    <div class="status completed">
+                                                                                        <span> {{ i.title }} </span>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
-
-                                                                        <div class="swiper-slide active">
-                                                                            <div class="roadmap-info">
-                                                                                <div class="timestamp active">
-                                                                                    <span class="date">May 2018</span>
-                                                                                </div>
-                                                                                <div class="status active">
-                                                                                    <span>Igo Realease</span>
-                                                                                    <span class="live">Live Now</span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div class="swiper-slide">
-                                                                            <div class="roadmap-info">
-                                                                                <div class="timestamp remaining">
-                                                                                    <span class="date">August 2018</span>
-                                                                                </div>
-                                                                                <div class="status remaining">
-                                                                                    <span> Beta version of <br/>Crypto Igo </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="swiper-slide">
-                                                                            <div class="roadmap-info">
-                                                                                <div class="timestamp remaining">
-                                                                                    <span class="date">November 2018</span>
-                                                                                </div>
-                                                                                <div class="status remaining">
-                                                                                    <span> Software development kit <br>for integrations </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="swiper-slide">
-                                                                            <div class="roadmap-info">
-                                                                                <div class="timestamp remaining">
-                                                                                    <span class="date">December 2018</span>
-                                                                                </div>
-                                                                                <div class="status remaining">
-                                                                                    <span> Mobile apps for <br/>iOS &amp; Android </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
+                                                                        {% endfor %}
                                                                     </div>
                                                                 </div>
                                                                 <div class="swiper-control">
@@ -830,106 +680,6 @@
                                             </div>
                                         </div>
                                         <!--/ Roadmap -->
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section
-                        class="elementor-section elementor-top-section elementor-element elementor-element-2a5aef9 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-                        data-id="2a5aef9" data-element_type="section">
-                    <div class="elementor-container elementor-column-gap-no">
-                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0e37b80"
-                             data-id="0e37b80" data-element_type="column">
-                            <div class="elementor-widget-wrap elementor-element-populated">
-                                <div class="elementor-element elementor-element-253ea0b elementor-widget elementor-widget-section-token"
-                                     data-id="253ea0b" data-element_type="widget"
-                                     data-widget_type="section-token.default">
-                                    <div class="elementor-widget-container">
-
-                                        <!-- Token Distribution/Stats -->
-                                        <div id="coin"
-                                             class="token-distribution our-coin section-pro section-padding bg-gradient">
-                                            <div class="container-fluid">
-                                                <div class="container">
-
-
-                                                    <div class="dark-bg-heading text-center">
-                                                        <div class="animated" data-animation="fadeInUpShorter"
-                                                             data-animation-delay="0.3s">
-                                                            <h6 class="sub-title">About Coin</h6>
-                                                            <h2 class="title">Our COIN</h2>
-                                                        </div>
-                                                        <p class="content-desc animated"
-                                                           data-animation="fadeInUpShorter"
-                                                           data-animation-delay="0.4s">Decentralized cryptocurrency is
-                                                            produced by the entire cryptocurrency system collectively
-                                                            <br>
-                                                            at a rate which is defined when the system is created and
-                                                            which
-                                                            is publicly known.</p>
-                                                    </div>
-
-
-                                                    <div class="row justify-content-xl-center">
-
-
-                                                        <div class="col-md-12 col-lg-4 col-xl-4   animated"
-                                                             data-animation="fadeInLeftShorter"
-                                                             data-animation-delay="0.6s">
-                                                            <div class="token-img">
-                                                                <img decoding="async" class="img-fluid"
-                                                                     src="https://jthemes.net/themes/wp/cryptoigo/wp-content/uploads/2018/07/our-coin.png"
-                                                                     alt="token-distribution">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-12 col-lg-6 col-xl-6  animated"
-                                                             data-animation="fadeInRightShorter"
-                                                             data-animation-delay="0.6s">
-                                                            <div class="content-area">
-                                                                <div class="dark-bg-heading mb-4">
-                                                                    <h3 class="title">CIC COIN</h3>
-                                                                </div>
-                                                                <div class="mt-1 contentdesc"><p>The validity of each
-                                                                    cryptocurrency's coins is provided by a blockchain.
-                                                                    A
-                                                                    blockchain is a continuously growing list of
-                                                                    records,
-                                                                    called blocks, which are linked and secured using
-                                                                    cryptography.Each block typically contains a hash
-                                                                    pointer as a link to a previous block, a timestamp
-                                                                    and
-                                                                    transaction data. By design, blockchains are
-                                                                    inherently
-                                                                    resistant to modification of the data. a blockchain
-                                                                    is
-                                                                    typically managed by a peer-to-peer network
-                                                                    collectively
-                                                                    adhering to a protocol for validating new blocks.
-                                                                    Once
-                                                                    recorded</p>
-                                                                    <p>The block time is the average time it takes for
-                                                                        the
-                                                                        network to generate one extra block in the
-                                                                        blockchain.[21] Some blockchains create a new
-                                                                        block
-                                                                        as frequently as every five seconds.</p></div>
-
-                                                                <div class="token-list">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--/ Token Distribution/Stats -->
 
 
                                     </div>
@@ -980,45 +730,26 @@
                                                         <div class="col-md-12 col-lg-6 col-xl-5 order-12  animated"
                                                              data-animation="fadeInLeftShorter"
                                                              data-animation-delay="0.6s">
-                                                            <div class="token-img">
-                                                                <img decoding="async" class="img-fluid"
-                                                                     src="https://jthemes.net/themes/wp/cryptoigo/wp-content/uploads/2018/06/chart.png"
-                                                                     alt="token-distribution">
-                                                            </div>
+                                                            {% for i in stis %}
+                                                                <div class="token-img">
+                                                                    <img decoding="async" class="img-fluid"
+                                                                         src="{{ i.images.url }}"
+                                                                         alt="token-distribution">
+                                                                </div>
+                                                            {% endfor %}
                                                         </div>
                                                         <div class="col-md-12 col-lg-6 col-xl-5   animated"
                                                              data-animation="fadeInRightShorter"
                                                              data-animation-delay="0.6s">
                                                             <div class="content-area">
-                                                                <div class="heading mb-4">
-                                                                    <h3 class="title">Details</h3>
-                                                                </div>
-                                                                <div class="mt-1 contentdesc"><p class="mt-1">To
-                                                                    calculate
-                                                                    the number of tokens you’ll receive, you can follow
-                                                                    the
-                                                                    following formula. Note that this applies to public
-                                                                    presale contributions only. If you participated
-                                                                    through
-                                                                    a syndicate or private presale,</p>
-                                                                    <p>To calculate the number of tokens you’ll receive,
-                                                                        you
-                                                                        can follow the following formula. Note that this
-                                                                        applies to public presale contributions only. If
-                                                                        you
-                                                                        participated through a syndicate or private
-                                                                        presale</p></div>
+                                                                {% for i in stis %}
+                                                                    <div class="heading mb-4">
+                                                                        <h3 class="title">{{ i.title }}</h3>
+                                                                    </div>
+                                                                    <div class="mt-1 contentdesc"><p
+                                                                            class="mt-1">{{ i.text }}</p></div>
 
-                                                                <div class="token-list">
-                                                                    <p><span>Symbol: </span> <strong
-                                                                            class="grey-accent2">CIC</strong>
-                                                                    </p>
-                                                                    <p><span>Initial Value:</span> <strong
-                                                                            class="grey-accent2">1 ETH = 3177.38
-                                                                        CIC</strong></p>
-                                                                    <p><span>Type: </span> <strong class="grey-accent2">ERC20</strong>
-                                                                    </p>
-                                                                </div>
+                                                                {% endfor %}
                                                             </div>
                                                         </div>
 
@@ -1840,102 +1571,76 @@
                                                     <div class="row">
                                                         <div class="col-md-12 col-xl-8 mx-auto">
                                                             <ul class="list-unstyled contact-info pb-5 mb-5">
-                                                                <li class="animated" data-animation="fadeInUpShorter"
+                                                                <li class="animated"
+                                                                    data-animation="fadeInUpShorter"
                                                                     data-animation-delay="0.5s">
                                                                     <i class="ti-headphone"></i> <span class="ml-1">+44 0123 4567</span>
                                                                 </li>
-                                                                <li class="animated" data-animation="fadeInUpShorter"
+                                                                <li class="animated"
+                                                                    data-animation="fadeInUpShorter"
                                                                     data-animation-delay="0.6s">
                                                                     <i class="ti-email"></i> <span class="ml-1">info@yourcompany.com</span>
                                                                 </li>
-                                                                <li class="animated" data-animation="fadeInUpShorter"
+                                                                <li class="animated"
+                                                                    data-animation="fadeInUpShorter"
                                                                     data-animation-delay="0.7s">
-                                                                    <i class="ti-comment-alt"></i> <span class="ml-1">Join us on Telegram</span>
+                                                                    <i class="ti-comment-alt"></i> <span
+                                                                        class="ml-1">Join us on Telegram</span>
                                                                 </li>
                                                             </ul>
-                                                            <div class="contact-form text-center">
+{#                                                            <form action="">#}
 
-                                                                <div class="wpcf7 no-js" id="wpcf7-f5-p333-o1"
-                                                                     lang="en-US"
-                                                                     dir="ltr">
-                                                                    <div class="screen-reader-response"><p role="status"
-                                                                                                           aria-live="polite"
-                                                                                                           aria-atomic="true"></p>
-                                                                        <ul></ul>
-                                                                    </div>
-                                                                    <form action="https://jthemes.net/themes/wp/cryptoigo/home-3d-graphic/#wpcf7-f5-p333-o1"
-                                                                          method="post" class="wpcf7-form init"
-                                                                          aria-label="Contact form"
-                                                                          novalidate="novalidate"
-                                                                          data-status="init">
-                                                                        <div style="display: none;">
-                                                                            <input type="hidden" name="_wpcf7"
-                                                                                   value="5"/>
-                                                                            <input type="hidden" name="_wpcf7_version"
-                                                                                   value="5.8.5"/>
-                                                                            <input type="hidden" name="_wpcf7_locale"
-                                                                                   value="en_US"/>
-                                                                            <input type="hidden" name="_wpcf7_unit_tag"
-                                                                                   value="wpcf7-f5-p333-o1"/>
-                                                                            <input type="hidden"
-                                                                                   name="_wpcf7_container_post"
-                                                                                   value="333"/>
-                                                                            <input type="hidden"
-                                                                                   name="_wpcf7_posted_data_hash"
-                                                                                   value=""/>
+                                                                <div class="contact-form text-center">
+
+                                                                    <div class="wpcf7 no-js" id="wpcf7-f5-p333-o1"
+                                                                         lang="en-US"
+                                                                         dir="ltr">
+                                                                        <div class="screen-reader-response"><p
+                                                                                role="status"
+                                                                                aria-live="polite"
+                                                                                aria-atomic="true"></p>
+                                                                            <ul></ul>
                                                                         </div>
-                                                                        <p><label> Your Name (required)<br/>
-                                                                            <span class="wpcf7-form-control-wrap"
-                                                                                  data-name="your-name"><input size="40"
-                                                                                                               class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                                                                               aria-required="true"
-                                                                                                               aria-invalid="false"
-                                                                                                               value=""
-                                                                                                               type="text"
-                                                                                                               name="your-name"/></span>
-                                                                        </label>
-                                                                        </p>
-                                                                        <p><label> Your Email (required)<br/>
-                                                                            <span class="wpcf7-form-control-wrap"
-                                                                                  data-name="your-email"><input
-                                                                                    size="40"
-                                                                                    class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
-                                                                                    aria-required="true"
-                                                                                    aria-invalid="false"
-                                                                                    value=""
-                                                                                    type="email"
-                                                                                    name="your-email"/></span>
-                                                                        </label>
-                                                                        </p>
-                                                                        <p><label> Subject<br/>
-                                                                            <span class="wpcf7-form-control-wrap"
-                                                                                  data-name="your-subject"><input
-                                                                                    size="40"
-                                                                                    class="wpcf7-form-control wpcf7-text"
-                                                                                    aria-invalid="false"
-                                                                                    value=""
-                                                                                    type="text"
-                                                                                    name="your-subject"/></span>
-                                                                        </label>
-                                                                        </p>
-                                                                        <p><label> Your Message<br/>
-                                                                            <span class="wpcf7-form-control-wrap"
-                                                                                  data-name="your-message"><textarea
-                                                                                    cols="40" rows="10"
-                                                                                    class="wpcf7-form-control wpcf7-textarea"
-                                                                                    aria-invalid="false"
-                                                                                    name="your-message"></textarea></span>
-                                                                        </label>
-                                                                        </p>
-                                                                        <p><input
-                                                                                class="wpcf7-form-control wpcf7-submit has-spinner"
-                                                                                type="submit" value="Send"/>
-                                                                        </p>
-                                                                        <div class="wpcf7-response-output"
-                                                                             aria-hidden="true"></div>
-                                                                    </form>
+                                                                        <form action="{% url 'home' %}"
+                                                                              method="post" class=""
+                                                                              aria-label="Contact form"
+                                                                              data-status="init">
+                                                                            <div>
+                                                                                <input type="text" name="name"/>
+
+                                                                            </div>
+                                                                            <p><label> Your Email (required)<br/>
+                                                                                <span class=""
+                                                                                      data-name="your-email"><input
+                                                                                        size="40"
+                                                                                        type="email"
+                                                                                        name="email"/></span>
+                                                                            </label>
+                                                                            </p>
+                                                                            <p><label> Subject<br/>
+                                                                                <span class=""
+                                                                                      data-name="your-subject"><input
+                                                                                        size="40"
+                                                                                        type="text"
+                                                                                        name="subject"/></span>
+                                                                            </label>
+                                                                            </p>
+                                                                            <p><label> Your Message<br/>
+                                                                                <span class="wpcf7-form-control-wrap"
+                                                                                      data-name="your-message"><textarea
+                                                                                        cols="40" rows="10"
+                                                                                        class="wpcf7-form-control wpcf7-textarea"
+                                                                                        name="text"></textarea></span>
+                                                                            </label>
+                                                                            </p>
+                                                                            <p><input type="submit"/>
+                                                                            </p>
+                                                                            <div class="wpcf7-response-output"
+                                                                                 aria-hidden="true"></div>
+                                                                        </form>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
+{#                                                            </form>#}
                                                         </div>
                                                     </div>
                                                 </div>

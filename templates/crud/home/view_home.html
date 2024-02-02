@@ -20,7 +20,7 @@
                     {% for i in view_home %}
                         <tr>
                             <th scope="row">{{ i.id }}</th>
-                            <td><img src="{{ i.images.url }}" alt="{{ i.images.url }}"></td>
+                            <td><img style="height: 2rem; width: 3rem;" src="{{ i.images.url }}" alt=""></td>
                             <td>{{ i.title }}</td>
                             <td>{{ i.text }}</td>
                             <td><a href="{% url 'edit_home' i.id %}"><i class="bi bi-pencil"></i></a></td>
